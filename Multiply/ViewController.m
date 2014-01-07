@@ -14,6 +14,7 @@
     __weak IBOutlet UITextField *myNumber;
     __weak IBOutlet UILabel *myMultiplier;
     __weak IBOutlet UILabel *myAnswer;
+    __weak IBOutlet UISlider *mySlider;
 }
 @end
 
@@ -37,6 +38,10 @@
     
     
     
+}
+- (IBAction)onSliderChanged:(id)sender {
+    [myMultiplier setText:[NSString stringWithFormat:@"%d", (int)mySlider.value]];
+
 }
 
 - (void)didReceiveMemoryWarning
